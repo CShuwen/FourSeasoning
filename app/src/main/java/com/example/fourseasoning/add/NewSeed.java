@@ -4,7 +4,7 @@ import android.app.Activity;
 
 public class NewSeed {
 
-    private String plantName, monthsToFull, soilCondition,waterFrequency,waterMethod, lightingCondition,additionalInfo
+    private String plantName, monthsToFull, soilCondition,waterFrequency,waterMethod, lightingCondition,additionalInfo;
     private int Thumbnail;
     Activity activity;
 
