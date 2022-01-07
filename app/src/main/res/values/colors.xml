@@ -7,4 +7,14 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- TODO: colors added from Lezheng -->
+    <color name="light_green">#82E0AA</color>
+    <color name="green">#58D68D</color>
+    <color name="dark_green">#82E0C2</color>
+    <color name="light_blue">#ABE0EB</color>
+    <color name="blue">#85C1E9</color>
+    <color name="dark_blue">#5DADE2</color>
+    <color name="light_grey">#F8F9F9</color>
+
 </resources>
