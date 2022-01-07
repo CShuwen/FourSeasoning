@@ -17,10 +17,11 @@ import androidx.fragment.app.Fragment;
 import com.example.fourseasoning.R;
 
 public class SeedFragment extends Fragment {
-    private TextView mSeedName;
-    private TextView mSeedCondition;
-    private TextView mLifeCycleTitle;
-    private TextView mSeedLifeCycle;
+    private TextView tvPlantName,
+            tvMonthsToFullMaturity,
+            tvSoilCondition,tvWaterFrequency,
+            tvWaterMethod,tvLightingCondition,
+            tvAdditionalInfo;
     Context thisContext;
     Button btStartPlanting;
 
@@ -33,24 +34,37 @@ public class SeedFragment extends Fragment {
         thisContext = container.getContext();
 
         Bundle args = getArguments();
+        String plantName = args.getString("plantName");
+        String monthsToFull = args.getString("monthsToFull");
+        String soilCondition = args.getString("soilCondition");
+        String waterFrequency = args.getString("waterFrequency");
+        String waterMethod = args.getString("waterMethod");
+        String lightingCondition = args.getString("lightingCondition");
+        String additionalInfo = args.getString("additionalInfo");
+        tvPlantName = view.findViewById(R.id.tvPlantName);
+        tvMonthsToFullMaturity = view.findViewById(R.id.tvMonthsToFullMaturity);
+        tvSoilCondition = view.findViewById(R.id.tvSoilCondition);
+        tvWaterFrequency = view.findViewById(R.id.tvWaterFrequency);
+        tvWaterMethod = view.findViewById(R.id.tvWaterMethod);
+        tvLightingCondition = view.findViewById(R.id.tvLightingCondition);
+        tvAdditionalInfo = view.findViewById(R.id.tvAdditionalInfo);
 
-        String seedName = args.getString("SeedName");
-        String seedCondition = args.getString("SeedCondition");
-        String lifeCycleTitle = args.getString("LifeCycleTitle");
-        String seedLifeCycle = args.getString("SeedLifeCycle");
+        tvPlantName.setText(plantName);
+        tvMonthsToFullMaturity.setText(monthsToFull);
+        tvSoilCondition.setText(soilCondition);
+        tvWaterFrequency.setText(waterFrequency);
+        tvWaterMethod.setText(waterMethod);
+        tvLightingCondition.setText(lightingCondition);
+        tvAdditionalInfo.setText(additionalInfo);
 
-
-
-        mSeedName = view.findViewById(R.id.SeedName);
-        mSeedCondition = view.findViewById(R.id.Conditions);
-        mLifeCycleTitle = view.findViewById(R.id.LifeCycleTitle);
-        mSeedLifeCycle = view.findViewById(R.id.LifeCycle);
         btStartPlanting = view.findViewById(R.id.btStartPlanting);
 
-        mSeedName.setText(seedName);
-        mSeedCondition.setText(seedCondition);
-        mLifeCycleTitle.setText(lifeCycleTitle);
-        mSeedLifeCycle.setText(seedLifeCycle);
+        btStartPlanting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
         return view;
     }
     }

@@ -43,6 +43,14 @@ public class RecyclerViewAdaptor_newseedlist extends RecyclerView.Adapter<Recycl
 
     @Override
     public void onBindViewHolder(@NonNull MyHolder myHolder, final int i) {
+    //this.plantName = plantName;
+        //        this.monthsToFull = monthsToFull;
+        //        this.soilCondition = soilCondition;
+        //        this.waterFrequency = waterFrequency;
+        //        this.waterMethod = waterMethod;
+        //        this.lightingCondition = lightingCondition;
+        //        this.additionalInfo = additionalInfo;
+        //        this.thumbnail = thumbnail;
 
         myHolder.seedName.setText(mData.get(i).getSeedName());
         myHolder.img_seed_thumbnail.setImageResource(mData.get(i).getThumbnail());
@@ -52,11 +60,14 @@ public class RecyclerViewAdaptor_newseedlist extends RecyclerView.Adapter<Recycl
 
                 Bundle bundle = new Bundle();
                 Fragment newFragment = new SeedFragment();
-                bundle.putString("SeedName", mData.get(i).getSeedName());
-                bundle.putString("SeedCondition", mData.get(i).getSeedCondition());
-                bundle.putString("LifeCycleTitle", mData.get(i).getLifeCycleTitle());
-                bundle.putString("SeedLifeCycle", mData.get(i).getSeedLifeCycle());
-                bundle.putInt("Thumbnail", mData.get(i).getThumbnail());
+                bundle.putString("plantName", mData.get(i).getSeedName());
+                bundle.putString("monthsToFull",mData.get(i).getMonthsToFull());
+                bundle.putString("soilCondition",mData.get(i).getSoilCondition());
+                bundle.putString("waterFrequency",mData.get(i).getWaterFrequency());
+                bundle.putString("waterMethod",mData.get(i).getWaterMethod());
+                bundle.putString("lightingCondition",mData.get(i).getLightingCondition());
+                bundle.putString("additionalInfo",mData.get(i).getAdditionalInfo());
+                bundle.putInt("thumbnail",mData.get(i).getThumbnail());
                 newFragment.setArguments(bundle);
                 fragment.getFragmentManager().beginTransaction().replace(R.id.add_container,newFragment).commit();
 

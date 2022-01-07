@@ -5,10 +5,10 @@ import android.app.Activity;
 public class NewSeed {
 
     private String plantName, monthsToFull, soilCondition,waterFrequency,waterMethod, lightingCondition,additionalInfo;
-    private int Thumbnail;
+    private int thumbnail;
     Activity activity;
 
-    public NewSeed(String plantName, String monthsToFull, String soilCondition, String waterFrequency, String waterMethod, String lightingCondition, String additionalInfo){
+    public NewSeed(String plantName, String monthsToFull, String soilCondition, String waterFrequency, String waterMethod, String lightingCondition, String additionalInfo, int thumbnail){
         this.plantName = plantName;
         this.monthsToFull = monthsToFull;
         this.soilCondition = soilCondition;
@@ -16,7 +16,7 @@ public class NewSeed {
         this.waterMethod = waterMethod;
         this.lightingCondition = lightingCondition;
         this.additionalInfo = additionalInfo;
-
+        this.thumbnail = thumbnail;
     }
 
     public String getSeedName() {
@@ -80,10 +80,6 @@ public class NewSeed {
     }
 
     public int getThumbnail() {
-        return Thumbnail;
-    }
-
-    public void setThumbnail(int thumbnail) {
-        Thumbnail = thumbnail;
+        return thumbnail;
     }
 }
