@@ -7,6 +7,8 @@
     tools:context=".MainActivity"
     android:id="@+id/bottom_container">
 
+
+
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomBar"
         android:layout_width="match_parent"
@@ -30,11 +32,18 @@
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/add"
+        android:id="@+id/add_plant"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_add"
         app:layout_anchor="@id/bottomBar"
         android:backgroundTint="@color/blue"/>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container"
+        android:name="com.example.fourseasoning.add.MainNewSeedList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:translationZ="-10dp" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
