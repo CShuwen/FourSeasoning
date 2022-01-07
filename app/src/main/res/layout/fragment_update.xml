@@ -1,0 +1,108 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        >
+        <TextView
+            android:id="@+id/texttitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Please enter plant details below"
+            android:textSize="24dp" />
+
+        <EditText
+            android:id="@+id/etPlantName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/texttitle"
+            android:hint="Name"
+            android:inputType="textPersonName"
+            android:textSize="24dp" />
+
+        <EditText
+            android:id="@+id/etBoxNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etPlantName"
+            android:hint="box number"
+            android:inputType="number"
+            android:textSize="24dp" />
+
+        <EditText
+            android:id="@+id/etMonthsToFull"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etBoxNumber"
+            android:hint="Months to full maturity "
+            android:inputType="number"
+            android:textSize="24dp" />
+
+        <EditText
+            android:id="@+id/etSoilCondition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etMonthsToFull"
+            android:hint="Soil Condition "
+            android:inputType="text"
+            android:textSize="24dp" />
+
+        <EditText
+            android:id="@+id/etWaterFrequency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Water Frequency"
+            android:inputType="text"
+            android:textSize="24dp" />
+
+        <EditText
+            android:id="@+id/etWaterMethod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Water Method "
+            android:inputType="text"
+            android:textSize="24dp" />
+
+        <EditText
+            android:id="@+id/etLightingCondition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Lighting Condition"
+            android:inputType="text"
+            android:textSize="24dp" />
+
+        <EditText
+            android:id="@+id/etAdditionalInformation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Additional Info"
+            android:inputType="text"
+            android:textSize="24dp" />
+
+        <Button
+            android:id="@+id/btUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btInsert"
+            android:text="Update plant Data"
+            android:textSize="24dp" />
+
+        <Button
+            android:id="@+id/btDelete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btUpdate"
+            android:text="Delete Plant"
+            android:textSize="24dp" />
+
+    </LinearLayout>
+
+</ScrollView>

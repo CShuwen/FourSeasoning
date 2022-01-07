@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:id="@+id/row_layout">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:layout_marginBottom="12dp"
+        android:padding="20dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvPlantName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="36sp"
+                android:layout_marginLeft="8dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="Plant Name Here"/>
+
+                <TextView
+                    android:id="@+id/tvSoilCondition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:text="Soil Conditions"/>
+
+            <TextView
+                android:id="@+id/tvPlantWater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Watering Frequency"/>
+
+            <TextView
+                android:id="@+id/tvLightingCondition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Lighting Condition"/>
+
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
