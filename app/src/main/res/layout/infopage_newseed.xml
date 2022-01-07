@@ -11,9 +11,9 @@
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="600dp"
+        android:layout_height="475dp"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="20dp"
         android:padding="10dp">
 
         <LinearLayout
@@ -65,7 +65,7 @@
     </androidx.core.widget.NestedScrollView>
 
     <Button
-        android:id="@+id/btn_startplanting"
+        android:id="@+id/newseedinfo_id"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_marginLeft="120dp"
