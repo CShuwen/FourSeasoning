@@ -8,11 +8,9 @@ import androidx.fragment.app.FragmentContainerView;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import com.example.fourseasoning.add.MainNewSeedList;
 import com.example.fourseasoning.bluetooth.BluetoothFragment;
-import com.example.fourseasoning.home.HomeFragment;
 import com.example.fourseasoning.home.MainSeedProfile;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;

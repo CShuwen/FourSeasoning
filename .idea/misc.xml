@@ -3,27 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/CShuwen/AndroidStudioProjects/FourSeasoning/app/src/main/res/drawable/ic_diy.xml" value="0.19583333333333333" />
-        <entry key="..\:/Users/CShuwen/AndroidStudioProjects/FourSeasoning/app/src/main/res/layout/activity_database.xml" value="0.1675925925925926" />
-        <entry key="..\:/Users/CShuwen/AndroidStudioProjects/FourSeasoning/app/src/main/res/layout/cardview_newseedlist.xml" value="0.1" />
-        <entry key="..\:/Users/CShuwen/AndroidStudioProjects/FourSeasoning/app/src/main/res/layout/cardview_seedprofile.xml" value="0.1" />
-        <entry key="..\:/Users/CShuwen/AndroidStudioProjects/FourSeasoning/app/src/main/res/layout/fragment_add.xml" value="0.25" />
-        <entry key="..\:/Users/CShuwen/AndroidStudioProjects/FourSeasoning/app/src/main/res/layout/fragment_bluetooth.xml" value="0.1" />
-        <entry key="..\:/Users/CShuwen/AndroidStudioProjects/FourSeasoning/app/src/main/res/layout/fragment_home.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_database.xml" value="0.1503623188405797" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.29128205128205126" />
+        <entry key="..\:/Develop/AndroidStudioProjects/FourSeasoning/app/src/main/res/drawable/ic_add.xml" value="0.28958333333333336" />
+        <entry key="..\:/Develop/AndroidStudioProjects/FourSeasoning/app/src/main/res/layout/activity_main.xml" value="0.14270833333333333" />
+        <entry key="..\:/Develop/AndroidStudioProjects/FourSeasoning/app/src/main/res/layout/cardview_newseedlist.xml" value="0.14270833333333333" />
+        <entry key="..\:/Develop/AndroidStudioProjects/FourSeasoning/app/src/main/res/layout/fragment_blank.xml" value="0.14270833333333333" />
+        <entry key="..\:/Develop/AndroidStudioProjects/FourSeasoning/app/src/main/res/layout/fragment_bluetooth.xml" value="0.12864583333333332" />
+        <entry key="..\:/Develop/AndroidStudioProjects/FourSeasoning/app/src/main/res/layout/fragment_home.xml" value="0.2259963768115942" />
+        <entry key="..\:/Develop/AndroidStudioProjects/FourSeasoning/app/src/main/res/menu/bottom_menu.xml" value="0.2734375" />
+        <entry key="app/src/main/res/drawable/ic_diybtn.xml" value="0.3260416666666667" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.35734040751188284" />
         <entry key="app/src/main/res/layout/cardview_newseedlist.xml" value="0.30512820512820515" />
         <entry key="app/src/main/res/layout/cardview_seedprofile.xml" value="0.20742753623188406" />
-        <entry key="app/src/main/res/layout/cardviewnewseedlist.xml" value="0.30512820512820515" />
-        <entry key="app/src/main/res/layout/cardviewseedprofile.xml" value="0.30512820512820515" />
+        <entry key="app/src/main/res/layout/fragment_add.xml" value="0.4238177435582693" />
         <entry key="app/src/main/res/layout/fragment_bluetooth.xml" value="0.20742753623188406" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.20742753623188406" />
         <entry key="app/src/main/res/layout/fragment_newseedlist.xml" value="0.16770833333333332" />
         <entry key="app/src/main/res/layout/infopage_newseed.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/mainpage_seedprofile.xml" value="0.2594681708299758" />
-        <entry key="app/src/main/res/layout/mainseedprofile.xml" value="0.2620841959607274" />
-        <entry key="app/src/main/res/layout/newseedinfopage.xml" value="0.30512820512820515" />
-        <entry key="app/src/main/res/layout/recyclerviewprofile.xml" value="0.30512820512820515" />
+        <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.16770833333333332" />
       </map>
     </option>
   </component>
