@@ -34,12 +34,12 @@ public class MainNewSeedList extends Fragment {
         thiscontext = container.getContext();
         btDiyPlant = view.findViewById(R.id.btDiyPlant);
         seed1 = new ArrayList<>();
-        seed1.add(new NewSeed("Peppermint", "Soil Condition : Alkaline\n"
+        seed1.add(new NewSeed("Peppermint", "6 Months to Full Maturity""Soil Condition : Alkaline\n"
                 + "water frequency : daily / Once per 24 Hours\n"
                 + "water method : optional\n"
                 + "preferred location : Full Sun",
                 "Life Cycle",
-                "6 Months to Full Maturity", R.drawable.peppermint));
+                , R.drawable.peppermint));
         seed1.add(new NewSeed("Parsley", "Soil Condition : Slightly Acidic\n"
                 + "water frequency : daily / Once per 24 Hours\n"
                 + "water method : pour\n"

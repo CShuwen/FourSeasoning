@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -21,6 +22,7 @@ public class SeedFragment extends Fragment {
     private TextView mLifeCycleTitle;
     private TextView mSeedLifeCycle;
     Context thisContext;
+    Button btStartPlanting;
 
 
     @Nullable
@@ -43,6 +45,7 @@ public class SeedFragment extends Fragment {
         mSeedCondition = view.findViewById(R.id.Conditions);
         mLifeCycleTitle = view.findViewById(R.id.LifeCycleTitle);
         mSeedLifeCycle = view.findViewById(R.id.LifeCycle);
+        btStartPlanting = view.findViewById(R.id.btStartPlanting);
 
         mSeedName.setText(seedName);
         mSeedCondition.setText(seedCondition);

@@ -41,12 +41,12 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/LifeCycleTitle"
+                android:id="@+id/tvMonthsToFullMaturity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:layout_marginTop="10dp"
-                android:text="Seed Life Cycle Title"
+                android:text="Months to Full Maturity"
                 android:textSize="21sp"
                 android:textStyle="bold" />
 
@@ -65,7 +65,7 @@
     </androidx.core.widget.NestedScrollView>
 
     <Button
-        android:id="@+id/newseedinfo_id"
+        android:id="@+id/btStartPlanting"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_marginLeft="120dp"
