@@ -16,7 +16,7 @@ public class SeedActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_seed2);
+        setContentView(R.layout.infopage_newseed);
 
         mSeedName = findViewById(R.id.SeedName);
         mSeedCondition = findViewById(R.id.Conditions);

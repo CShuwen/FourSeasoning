@@ -24,8 +24,9 @@ public class MainNewSeedList extends Fragment {
     Context thiscontext;
     @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_add, container, false);
+        thiscontext = container.getContext();
         seed1 = new ArrayList<>();
         seed1.add(new NewSeed("Peppermint", "Soil Condition : Alkaline\n"
                 + "water frequency : daily / Once per 24 Hours\n"
@@ -46,7 +47,7 @@ public class MainNewSeedList extends Fragment {
                 "Life Cycle",
                 "A Week to Full Maturity", R.drawable.bean_sprout));
 
-        myrecyclerView = view.findViewById(R.id.recyclerView_id);
+        myrecyclerView = view.findViewById(R.id.recyclerView_add_id);
 
         myAdapter = new RecyclerViewAdaptor_newseedlist(thiscontext, seed1);
 
@@ -56,5 +57,5 @@ public class MainNewSeedList extends Fragment {
 
         return view;
     }
-    }
+
 }
