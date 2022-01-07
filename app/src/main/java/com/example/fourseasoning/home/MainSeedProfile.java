@@ -25,7 +25,6 @@ import java.util.ArrayList;
 
 public class MainSeedProfile extends Fragment {
     RecyclerView recyclerView;
-    FloatingActionButton add_button;
     DatabaseHelper db;
     ArrayList<String> plantId,
             plantNames,

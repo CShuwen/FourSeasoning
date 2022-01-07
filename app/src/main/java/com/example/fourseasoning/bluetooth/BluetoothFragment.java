@@ -96,11 +96,10 @@ public class BluetoothFragment extends Fragment {
             Bundle addressBundle = new Bundle();
             addressBundle.putString(EXTRA_ADDRESS, address);
             bluetoothControlFragment.setArguments(addressBundle);
-            FragmentTransaction transaction = getFragmentManager().beginTransaction();
+            FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.bluetoothFragment, bluetoothControlFragment);
             transaction.addToBackStack(null);
             transaction.commit();
-
         }
     };
 }
