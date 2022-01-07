@@ -6,8 +6,11 @@ import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 
+import com.example.fourseasoning.add.MainNewSeedList;
+import com.example.fourseasoning.bluetooth.BluetoothFragment;
+import com.example.fourseasoning.home.HomeFragment;
+import com.example.fourseasoning.home.MainSeedProfile;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 

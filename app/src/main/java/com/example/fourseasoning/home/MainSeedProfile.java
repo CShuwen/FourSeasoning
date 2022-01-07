@@ -1,4 +1,4 @@
-package com.example.fourseasoning;
+package com.example.fourseasoning.home;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

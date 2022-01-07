@@ -1,4 +1,4 @@
-package com.example.fourseasoning;
+package com.example.fourseasoning.add;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,6 +11,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.fourseasoning.R;
 
 import java.util.List;
 
@@ -28,7 +30,7 @@ public class RecyclerViewAdaptor_newseedlist extends RecyclerView.Adapter<Recycl
     public MyHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i){
         View view;
         LayoutInflater mInflater = LayoutInflater.from(mContext);
-        view = mInflater.inflate(R.layout.cardview_seedprofile, viewGroup, false);
+        view = mInflater.inflate(R.layout.cardview_newseedlist, viewGroup, false);
         return new MyHolder(view);
     }
 

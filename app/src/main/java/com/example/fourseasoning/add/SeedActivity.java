@@ -1,10 +1,12 @@
-package com.example.fourseasoning;
+package com.example.fourseasoning.add;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.fourseasoning.R;
 
 public class SeedActivity extends AppCompatActivity {
     private TextView mSeedName;

@@ -1,4 +1,4 @@
-package com.example.fourseasoning;
+package com.example.fourseasoning.add;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -8,12 +8,12 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Context;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+
+import com.example.fourseasoning.R;
 
 import java.util.ArrayList;
 import java.util.List;

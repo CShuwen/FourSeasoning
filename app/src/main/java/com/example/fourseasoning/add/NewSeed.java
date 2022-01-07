@@ -1,4 +1,4 @@
-package com.example.fourseasoning;
+package com.example.fourseasoning.add;
 
 public class NewSeed {
     private String SeedName;
