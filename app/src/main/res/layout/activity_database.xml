@@ -1,0 +1,123 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/texttitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Please enter the PLANT details below"
+            android:textSize="24dp" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/texttitle"
+            android:hint="Name"
+            android:inputType="textPersonName"
+            android:textSize="24dp" />
+
+        <EditText
+            android:id="@+id/contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:hint="box number"
+            android:inputType="number"
+            android:textSize="24dp" />
+
+        <EditText
+            android:id="@+id/live"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contact"
+            android:hint="Months to full maturity "
+            android:inputType="number"
+            android:textSize="24dp" />
+
+        <EditText
+            android:id="@+id/soil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/live"
+            android:hint="Soil condition "
+            android:inputType="text"
+            android:textSize="24dp" />
+
+        <EditText
+            android:id="@+id/water"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Water frequency"
+            android:inputType="text"
+            android:textSize="24dp" />
+
+        <EditText
+            android:id="@+id/waterm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Water method "
+            android:inputType="text"
+            android:textSize="24dp" />
+
+        <EditText
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Location "
+            android:inputType="text"
+            android:textSize="24dp" />
+
+        <EditText
+            android:id="@+id/addinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Additional Info"
+            android:inputType="text"
+            android:textSize="24dp" />
+
+
+        <Button
+            android:id="@+id/btnInsert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Add new plant"
+            android:textSize="24dp" />
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnInsert"
+            android:text="Update plant Data"
+            android:textSize="24dp" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnUpdate"
+            android:text="Delete Existing Data"
+            android:textSize="24dp" />
+
+        <Button
+            android:id="@+id/btnView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnDelete"
+            android:text="View all your plants"
+            android:textSize="24dp" />
+    </LinearLayout>
+
+</ScrollView>
