@@ -23,22 +23,13 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/SeedName"
+                android:id="@+id/tvPlantName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Seed Name"
+                android:text="Plant Name"
                 android:textSize="21sp"
                 android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/Conditions"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="18dp"
-                android:layout_marginTop="20dp"
-                android:text="Seed Condition"
-                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/tvMonthsToFullMaturity"
@@ -51,14 +42,104 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/LifeCycle"
+                android:id="@+id/tvmonthsTofullmaturity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="18dp"
                 android:layout_marginTop="20dp"
-                android:text="Seed Life Cycle"
+                android:text="Seed Condition"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/tvSoilCondition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Soil Condition"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tvsoilcondition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="18dp"
+                android:layout_marginTop="20dp"
+                android:text="Soil Condition"
                 android:textSize="20sp" />
 
+            <TextView
+                android:id="@+id/tvWaterFrequency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Water Frequency"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tvwaterfrequency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="18dp"
+                android:layout_marginTop="20dp"
+                android:text="Water Frequency"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvWaterMethod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Water Method"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvwatermethod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="18dp"
+                android:layout_marginTop="20dp"
+                android:text="Water Method"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvLighteningCondition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Lightening Condition"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvlighteningcondition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="18dp"
+                android:layout_marginTop="20dp"
+                android:text="Lightening Condition"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/tvAdditionalInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Additional Info"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvadditionalinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="18dp"
+                android:layout_marginTop="20dp"
+                android:text="Additional Info"
+                android:textSize="20sp" />
 
         </LinearLayout>
 
