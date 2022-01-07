@@ -134,7 +134,7 @@ public class MainNewSeedList extends Fragment {
 
         myrecyclerView = view.findViewById(R.id.recyclerView_add_id);
 
-        myAdapter = new RecyclerViewAdaptor_newseedlist(thiscontext, seed1,this);
+        myAdapter = new RecyclerViewAdaptor_newseedlist(thiscontext, sampleSeeds,this);
 
         myrecyclerView.setLayoutManager(new GridLayoutManager(thiscontext, 2));
 
