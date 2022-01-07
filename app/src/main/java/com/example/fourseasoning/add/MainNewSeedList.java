@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
+import com.example.fourseasoning.MainActivity;
 import com.example.fourseasoning.R;
 
 import java.util.ArrayList;
@@ -46,10 +47,58 @@ public class MainNewSeedList extends Fragment {
                 + "preferred location : Low Light",
                 "Life Cycle",
                 "A Week to Full Maturity", R.drawable.bean_sprout));
+        seed1.add(new NewSeed("Mimosa", "Soil Condition : Acidic to Neutral (5.0-7.5)\n"
+                + "water frequency : Daily\n"
+                + "water method : Mist\n"
+                + "preferred location : Bright light, some direct sunlight",
+                "Life Cycle",
+                "Three months to Full Maturity", R.drawable.mimosa));
+        seed1.add(new NewSeed("Cat Grass", "Soil Condition : Neutral \n"
+                + "water frequency : Daily\n"
+                + "water method : Mist\n"
+                + "preferred location : Leave it out of direct sunlight",
+                "Life Cycle",
+                "Half a Month to Full Maturity", R.drawable.catgrass));
+        seed1.add(new NewSeed("Basil", "Soil Condition : Slightly Acidic to Slightly Alkaline\n"
+                + "water frequency : Daily\n"
+                + "water method : Pour 1 Inch\n"
+                + "preferred location : Full Sun\n",
+                "Life Cycle",
+                "10 days to Full Maturity", R.drawable.basil));
+        seed1.add(new NewSeed("Ginger", "Soil Condition : Acidic\n"
+                + "water frequency : Daily\n"
+                + "water method : Mist\n"
+                + "preferred location : Full Sun\n",
+                "Life Cycle",
+                "4 - 7 Months to Full Maturity", R.drawable.ginger));
+        seed1.add(new NewSeed("Oregano", "Soil Condition : Slightly Acidic to Neutral (6.5 to 7.0)\n"
+                + "water frequency : Daily\n"
+                + "water method : Mist\n"
+                + "preferred location : Full Sun\n",
+                "Life Cycle",
+                "1.5 Months to Full Maturity", R.drawable.oregano));
+        seed1.add(new NewSeed("rosemary", "Soil Condition : Acidic, neutral (6.0 to 7.0)\n"
+                + "water frequency : Daily\n"
+                + "water method : Pour\n"
+                + "preferred location : Full Sun\n",
+                "Life Cycle",
+                "6 - 12 Months to Full Maturity", R.drawable.rosemary));
+        seed1.add(new NewSeed("Spade Leaf", "Soil Condition : Neutral to Slightly Alkaline (6-7.8)\n"
+                + "water frequency : Daily\n"
+                + "water method : Mist\n"
+                + "preferred location : 4 - 6 Hours Of Full Sun\n",
+                "Life Cycle",
+                "3 Months to Full Maturity", R.drawable.spadeleaf));
+        seed1.add(new NewSeed("Zebra Plant", "Soil Condition : Neutral\n"
+                + "water frequency :  Water when the top nch of soil has dried out\n"
+                + "water method : Pour\n"
+                + "preferred location : 4 - 6 hours of non-direct Sunlight\n",
+                "Life Cycle",
+                "6 Months to Full Maturity", R.drawable.zebraplant));
 
         myrecyclerView = view.findViewById(R.id.recyclerView_add_id);
 
-        myAdapter = new RecyclerViewAdaptor_newseedlist(thiscontext, seed1);
+        myAdapter = new RecyclerViewAdaptor_newseedlist(thiscontext, seed1,this);
 
         myrecyclerView.setLayoutManager(new GridLayoutManager(thiscontext, 2));
 

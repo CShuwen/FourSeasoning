@@ -2,6 +2,7 @@ package com.example.fourseasoning.add;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,8 +11,12 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.fourseasoning.MainActivity;
 import com.example.fourseasoning.R;
 
 import java.util.List;
@@ -19,10 +24,12 @@ import java.util.List;
 public class RecyclerViewAdaptor_newseedlist extends RecyclerView.Adapter<RecyclerViewAdaptor_newseedlist.MyHolder> {
     private Context mContext;
     private List<NewSeed> mData;
+    private Fragment fragment;
 
-    public RecyclerViewAdaptor_newseedlist(Context mContext, List<NewSeed> mData){
+    public RecyclerViewAdaptor_newseedlist(Context mContext, List<NewSeed> mData, Fragment fragment){
         this.mContext = mContext;
         this.mData = mData;
+        this.fragment = fragment;
     }
 
     @NonNull
@@ -42,15 +49,19 @@ public class RecyclerViewAdaptor_newseedlist extends RecyclerView.Adapter<Recycl
         myHolder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(mContext, SeedActivity.class);
 
-                intent.putExtra("SeedName", mData.get(i).getSeedName());
-                intent.putExtra("SeedCondition", mData.get(i).getSeedCondition());
-                intent.putExtra("LifeCycleTitle", mData.get(i).getLifeCycleTitle());
-                intent.putExtra("SeedLifeCycle", mData.get(i).getSeedLifeCycle());
-                intent.putExtra("Thumbnail", mData.get(i).getThumbnail());
-
-                mContext.startActivity(intent);
+                Bundle bundle = new Bundle();
+                Fragment newFragment = new SeedFragment();
+                bundle.putString("SeedName", mData.get(i).getSeedName());
+                bundle.putString("SeedCondition", mData.get(i).getSeedCondition());
+                bundle.putString("LifeCycleTitle", mData.get(i).getLifeCycleTitle());
+                bundle.putString("SeedLifeCycle", mData.get(i).getSeedLifeCycle());
+                bundle.putInt("Thumbnail", mData.get(i).getThumbnail());
+                newFragment.setArguments(bundle);
+                FragmentTransaction transaction = fragment.getFragmentManager().beginTransaction();
+                transaction.replace(R.id.add_container,newFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
             }
         });
     }
