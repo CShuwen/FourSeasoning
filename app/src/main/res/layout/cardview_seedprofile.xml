@@ -4,7 +4,7 @@
     android:layout_height="190dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:clickable="true"
-    android:id="@+id/cardviewid"
+    android:id="@+id/cardview_profileid"
     android:layout_margin="8dp"
     app:cardCornerRadius="20dp"
     android:foreground="?android:attr/selectableItemBackground"

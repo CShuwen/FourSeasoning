@@ -31,10 +31,13 @@ public class MainActivity extends AppCompatActivity {
                 Fragment fragment = null;
                 switch (item.getItemId()) {
                     case R.id.home:
-                        fragment = new HomeFragment();
+                        fragment = new MainSeedProfile();
                         break;
                     case  R.id.bluetooth:
                         fragment = new BluetoothFragment();
+                        break;
+                    case R.id.add:
+                        fragment = new MainNewSeedList();
                         break;
                 }
                 getSupportFragmentManager().beginTransaction().replace(R.id.bottom_container, fragment).commit();

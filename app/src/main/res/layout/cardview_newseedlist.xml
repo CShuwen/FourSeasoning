@@ -4,7 +4,7 @@
     android:layout_height="190dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:clickable="true"
-    android:id="@+id/cardviewid"
+    android:id="@+id/cardview_newseedlistid"
     android:layout_margin="8dp"
     app:cardCornerRadius="20dp"
     android:foreground="?android:attr/selectableItemBackground"
@@ -15,7 +15,7 @@
         android:orientation="vertical"
         >
         <ImageView
-            android:id="@+id/seed_img_id"
+            android:id="@+id/newseed_img_id"
             android:layout_width="match_parent"
             android:layout_height="160dp"
             android:layout_marginTop="10dp"
@@ -26,7 +26,7 @@
             />
 
         <TextView
-            android:id="@+id/text_seed_id"
+            android:id="@+id/text_newseed_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
