@@ -93,15 +93,14 @@ public class BluetoothFragment extends Fragment {
             String info = ((TextView)view).getText().toString();
             String address = info.substring(info.length() -17);
             Fragment bluetoothControlFragment = new BluetoothControlFragment();
-            /*
             Bundle addressBundle = new Bundle();
             addressBundle.putString(EXTRA_ADDRESS, address);
             bluetoothControlFragment.setArguments(addressBundle);
             FragmentTransaction transaction = getFragmentManager().beginTransaction();
-            transaction.replace(R.id.fragmentContainerView, bluetoothControlFragment);
+            transaction.replace(R.id.bluetoothFragment, bluetoothControlFragment);
             transaction.addToBackStack(null);
             transaction.commit();
-             */
+
         }
     };
 }
