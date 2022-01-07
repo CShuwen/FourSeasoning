@@ -9,6 +9,9 @@ import android.widget.EditText;
 
 import androidx.annotation.Nullable;
 public class DBHelper extends SQLiteOpenHelper {
+
+    private static final String DATABASE_NAME = "FourSeasoning.db";
+
     private static final String TABLE_NAME = "Userdetails";
     private static final String PLANT_NAME = "name";
     private static final String PLANT_BOX = "box";
@@ -19,9 +22,8 @@ public class DBHelper extends SQLiteOpenHelper {
     private static final String PLANT_LOCATION= "location";
     private static final String PLANT_ADDINFO= "addinfo";
 
-    String name, contact, live, soil, water, waterm, location, addinfo;
     public DBHelper(Context context) {
-        super(context, "Userdata.db", null, 1);
+        super(context, DATABASE_NAME, null, 1);
     }
 
     @Override
@@ -32,10 +34,10 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase DB, int i, int i1) {
-        DB.execSQL("drop Table if exists Userdetails");
+        DB.execSQL("drop Table if exists " + TABLE_NAME);
     }
 
-    public Boolean insertuserdata(String name, String contact, String live, String soil, String water,
+    public Boolean insertUserData(String name, String contact, String live, String soil, String water,
                                   String waterm, String location, String addinfo)
     {
         SQLiteDatabase DB = this.getWritableDatabase();
@@ -57,7 +59,7 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
 
-    public Boolean updateuserdata(String name, String box, String live, String soil, String water,
+    public Boolean updateUserData(String name, String box, String live, String soil, String water,
                                   String waterm, String location, String addinfo) {
         SQLiteDatabase DB = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -70,9 +72,9 @@ public class DBHelper extends SQLiteOpenHelper {
         contentValues.put(PLANT_LOCATION, location);
         contentValues.put(PLANT_ADDINFO, addinfo);
 
-        Cursor cursor = DB.rawQuery("Select * from Userdetails where name = ?", new String[]{name});
+        Cursor cursor = DB.rawQuery("Select * from " + TABLE_NAME + " where " + PLANT_NAME + " = ?", new String[]{name});
         if (cursor.getCount() > 0) {
-            long result = DB.update("Userdetails", contentValues, "name=?", new String[]{name});
+            long result = DB.update(TABLE_NAME, contentValues, PLANT_NAME + " =?", new String[]{name});
             if (result == -1) {
                 return false;
             } else {
@@ -83,12 +85,12 @@ public class DBHelper extends SQLiteOpenHelper {
         }}
 
 
-    public Boolean deletedata (String name)
+    public Boolean deleteData(String name)
     {
         SQLiteDatabase DB = this.getWritableDatabase();
-        Cursor cursor = DB.rawQuery("Select * from Userdetails where name = ?", new String[]{name});
+        Cursor cursor = DB.rawQuery("Select * from " + TABLE_NAME + " where " + PLANT_NAME + " = ?", new String[]{name});
         if (cursor.getCount() > 0) {
-            long result = DB.delete("Userdetails", "name=?", new String[]{name});
+            long result = DB.delete(TABLE_NAME, PLANT_NAME + " =?", new String[]{name});
             if (result == -1) {
                 return false;
             } else {
@@ -102,10 +104,10 @@ public class DBHelper extends SQLiteOpenHelper {
 
 
 
-    public Cursor getdata ()
+    public Cursor getData()
     {
         SQLiteDatabase DB = this.getWritableDatabase();
-        Cursor cursor = DB.rawQuery("Select * from Userdetails", null);
+        Cursor cursor = DB.rawQuery("Select * from " + TABLE_NAME, null);
         return cursor;
 
     }

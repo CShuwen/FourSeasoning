@@ -56,19 +56,10 @@ public class MainActivity extends AppCompatActivity {
 
                         fragment = new BluetoothFragment();
                         break;
-                        /*
-                    case R.id.add:
-                        Toast.makeText(getApplicationContext(), "add clicked", Toast.LENGTH_SHORT).show();
-                        fragment = new MainNewSeedList();
-                        break;
-                        */
-
                 }
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
                 return true;
             }
         });
-
     }
-
 }

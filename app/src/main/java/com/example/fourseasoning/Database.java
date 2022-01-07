@@ -43,7 +43,7 @@ public class Database extends AppCompatActivity {
                 String locationTXT = location.getText().toString();
                 String addinfoTXT = addinfo.getText().toString();
 
-                Boolean checkinsertdata = DB.insertuserdata(nameTXT,
+                Boolean checkinsertdata = DB.insertUserData(nameTXT,
                         contactTXT,
                         liveTXT ,
                         soilTXT,
@@ -69,7 +69,7 @@ public class Database extends AppCompatActivity {
                 String locationTXT = location.getText().toString();
                 String addinfoTXT = addinfo.getText().toString();
 
-                Boolean checkupdatedata = DB.updateuserdata(
+                Boolean checkupdatedata = DB.updateUserData(
                         nameTXT,
                         contactTXT,
                         liveTXT,
@@ -87,7 +87,7 @@ public class Database extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String nameTXT = name.getText().toString();
-                Boolean checkudeletedata = DB.deletedata(nameTXT);
+                Boolean checkudeletedata = DB.deleteData(nameTXT);
                 if(checkudeletedata)
                     Toast.makeText(Database.this, "Entry Deleted", Toast.LENGTH_SHORT).show();
                 else
@@ -97,7 +97,7 @@ public class Database extends AppCompatActivity {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Cursor res = DB.getdata();
+                Cursor res = DB.getData();
                 if(res.getCount()==0){
                     Toast.makeText(Database.this, "No Entry Exists", Toast.LENGTH_SHORT).show();
                     return;
