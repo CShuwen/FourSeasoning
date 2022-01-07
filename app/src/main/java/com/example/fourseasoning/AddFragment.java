@@ -1,5 +1,6 @@
 package com.example.fourseasoning;
 
+
 import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -42,7 +43,7 @@ public class AddFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         thisContext = container.getContext();
-        View view = inflater.inflate(R.layout.fragment_add, container, false);
+        View view = inflater.inflate(R.layout.fragment_add_diy, container, false);
         etPlantName = view.findViewById(R.id.etPlantName);
         etBoxNumber = view.findViewById(R.id.etBoxNumber);
         etMonthsToFull = view.findViewById(R.id.etMonthsToFull);

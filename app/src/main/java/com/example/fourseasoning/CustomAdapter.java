@@ -1,7 +1,6 @@
 package com.example.fourseasoning;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,6 +10,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -86,7 +87,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                 bundle.putString("additionalInfo", String.valueOf(plantAdditionalInfos.get(position)));
 
                 updateFragment.setArguments(bundle);
-                activity.getFragmentManager().beginTransaction().replace(R.id.home_container, updateFragment).commit();
+                ((AppCompatActivity)context).getSupportFragmentManager().beginTransaction().replace(R.id.home_container, updateFragment).commit();
             }
         });
 

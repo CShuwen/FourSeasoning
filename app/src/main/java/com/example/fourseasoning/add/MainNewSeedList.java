@@ -11,8 +11,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 
+import com.example.fourseasoning.AddFragment;
 import com.example.fourseasoning.MainActivity;
 import com.example.fourseasoning.R;
 
@@ -23,11 +26,13 @@ public class MainNewSeedList extends Fragment {
     RecyclerViewAdaptor_newseedlist myAdapter;
     List<NewSeed> seed1;
     Context thiscontext;
+    ImageButton btDiyPlant;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_add, container, false);
         thiscontext = container.getContext();
+        btDiyPlant = view.findViewById(R.id.btDiyPlant);
         seed1 = new ArrayList<>();
         seed1.add(new NewSeed("Peppermint", "Soil Condition : Alkaline\n"
                 + "water frequency : daily / Once per 24 Hours\n"
@@ -95,6 +100,14 @@ public class MainNewSeedList extends Fragment {
                 + "preferred location : 4 - 6 hours of non-direct Sunlight\n",
                 "Life Cycle",
                 "6 Months to Full Maturity", R.drawable.zebraplant));
+        btDiyPlant.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //go to the addfragment
+                Fragment addFragment = new AddFragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.add_container, addFragment).commit();
+            }
+        });
 
         myrecyclerView = view.findViewById(R.id.recyclerView_add_id);
 

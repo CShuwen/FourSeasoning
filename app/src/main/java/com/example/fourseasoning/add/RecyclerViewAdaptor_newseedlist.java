@@ -58,10 +58,8 @@ public class RecyclerViewAdaptor_newseedlist extends RecyclerView.Adapter<Recycl
                 bundle.putString("SeedLifeCycle", mData.get(i).getSeedLifeCycle());
                 bundle.putInt("Thumbnail", mData.get(i).getThumbnail());
                 newFragment.setArguments(bundle);
-                FragmentTransaction transaction = fragment.getFragmentManager().beginTransaction();
-                transaction.replace(R.id.add_container,newFragment);
-                transaction.addToBackStack(null);
-                transaction.commit();
+                fragment.getFragmentManager().beginTransaction().replace(R.id.add_container,newFragment).commit();
+
             }
         });
     }

@@ -3,14 +3,18 @@ package com.example.fourseasoning;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import android.app.Fragment;
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+
+import com.example.fourseasoning.home.MainSeedProfile;
 
 
 public class UpdateFragment extends Fragment {
@@ -45,13 +49,15 @@ public class UpdateFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getBundleData();
-        setBundleData();
+        //Log.d("retrieved plant",plantName);
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_update, container, false);
+
         thisContext = container.getContext();
         etPlantName = view.findViewById(R.id.etPlantName);
         etBoxNumber = view.findViewById(R.id.etBoxNumber);
@@ -61,6 +67,9 @@ public class UpdateFragment extends Fragment {
         etWaterMethod = view.findViewById(R.id.etWaterMethod);
         etLightingCondition = view.findViewById(R.id.etLightingCondition);
         etAdditionalInfo = view.findViewById(R.id.etAdditionalInformation);
+        setBundleData();
+        btUpdate = view.findViewById(R.id.btUpdate);
+        btDelete = view.findViewById(R.id.btDelete);
 
         //Initialise new database
         db = new DatabaseHelper(thisContext);
@@ -93,6 +102,9 @@ public class UpdateFragment extends Fragment {
                 waterMethod,
                 lightingCondition,
                 additionalInfo);
+        //popback to previous fragment
+        //((AppCompatActivity)thisContext).getSupportFragmentManager().beginTransaction().replace(R.id.svUpdate,new MainSeedProfile()).commit();
+        ((AppCompatActivity)thisContext).getSupportFragmentManager().popBackStack();
     }
 
 
@@ -136,7 +148,7 @@ public class UpdateFragment extends Fragment {
             public void onClick(DialogInterface dialogInterface, int i) {
                 db.deleteOneRow(plantId);
                 //popback to previous fragment
-                getFragmentManager().popBackStackImmediate();
+
             }
         });
 

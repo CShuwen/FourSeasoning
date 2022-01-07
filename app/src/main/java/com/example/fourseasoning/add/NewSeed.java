@@ -1,11 +1,14 @@
 package com.example.fourseasoning.add;
 
+import android.app.Activity;
+
 public class NewSeed {
     private String SeedName;
     private String SeedCondition;
     private String LifeCycleTitle;
     private String SeedLifeCycle;
     private int Thumbnail;
+    Activity activity;
 
     public NewSeed(String name, String seedCondition, String lifeCycleTitle, String seedLifeCycle, int thumbnail){
         SeedName = name;
