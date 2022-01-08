@@ -11,8 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardCornerRadius="20dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="6dp"
         android:padding="8dp"
+
+        android:backgroundTint="#E1EAE5"
         app:cardElevation="4dp">
 
         <LinearLayout
