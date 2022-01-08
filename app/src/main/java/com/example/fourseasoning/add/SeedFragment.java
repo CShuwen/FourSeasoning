@@ -14,6 +14,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import com.example.fourseasoning.AddFragment;
 import com.example.fourseasoning.R;
 
 public class SeedFragment extends Fragment {
@@ -62,7 +63,27 @@ public class SeedFragment extends Fragment {
         btStartPlanting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                /*
+                       String plantName = etPlantName.getText().toString().trim();
+        String boxNumber = etBoxNumber.getText().toString().trim();
+        String monthsToFull= etMonthsToFull.getText().toString().trim();
+        String soilCondition = etSoilCondition.getText().toString().trim();
+        String waterFrequency = etWaterFrequency.getText().toString().trim();
+        String waterMethod = etWaterMethod.getText().toString().trim();
+        String lightingCondition = etLightingCondition.getText().toString().trim();
+        String additionalInfo = etAdditionalInfo.getText().toString().trim();
+                 */
+                Fragment addFragment = new AddFragment();
+                Bundle bundle = new Bundle();
+                bundle.putString("plantName", plantName);
+                bundle.putString("monthsToFull", monthsToFull);
+                bundle.putString("soilCondition",soilCondition);
+                bundle.putString("waterFrequency", waterFrequency);
+                bundle.putString("waterMethod",waterMethod);
+                bundle.putString("lightingCondition", lightingCondition);
+                bundle.putString("additionalInfo",additionalInfo);
+                addFragment.setArguments(bundle);
+                ((AppCompatActivity)thisContext).getSupportFragmentManager().beginTransaction().replace(R.id.add_container,addFragment).commit();
             }
         });
         return view;

@@ -44,6 +44,8 @@ public class AddFragment extends Fragment {
         // Inflate the layout for this fragment
         thisContext = container.getContext();
         View view = inflater.inflate(R.layout.fragment_add_diy, container, false);
+
+
         etPlantName = view.findViewById(R.id.etPlantName);
         etBoxNumber = view.findViewById(R.id.etBoxNumber);
         etMonthsToFull = view.findViewById(R.id.etMonthsToFull);
@@ -53,6 +55,28 @@ public class AddFragment extends Fragment {
         etLightingCondition = view.findViewById(R.id.etLightingCondition);
         etAdditionalInfo = view.findViewById(R.id.etAdditionalInformation);
         btInsert = view.findViewById(R.id.btInsert);
+
+        //check for bundle
+        if( getArguments() != null){
+            //set et texts
+            Bundle args = getArguments();
+            String plantName = args.getString("plantName");
+            String monthsToFull = args.getString("monthsToFull");
+            String soilCondition = args.getString("soilCondition");
+            String waterFrequency = args.getString("waterFrequency");
+            String waterMethod = args.getString("waterMethod");
+            String lightingCondition = args.getString("lightingCondition");
+            String additionalInfo = args.getString("additionalInfo");
+
+            etPlantName.setText(plantName);
+            etMonthsToFull.setText(monthsToFull);
+            etSoilCondition.setText(soilCondition);
+            etWaterFrequency.setText(waterFrequency);
+            etWaterMethod.setText(waterMethod);
+            etLightingCondition.setText(lightingCondition);
+            etAdditionalInfo.setText(additionalInfo);
+        }
+
 
         //Initialise new database helper
         db = new DatabaseHelper(thisContext);
